@@ -162,6 +162,7 @@ body {
 }
 
 #msg {
+    display: none;
     color: red;
 }
 

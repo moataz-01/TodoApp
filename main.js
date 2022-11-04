@@ -31,9 +31,11 @@ let formValidation = () => {
     if (textInput.value === "") {
       console.log("failure");
       msg.innerHTML = "Task cannot be blank";
+      msg.style.display = "block";
     } else {
       console.log("success");
       msg.innerHTML = "";
+      msg.style.display = "none";
       acceptData();
       closeForm();
     }
@@ -66,7 +68,7 @@ let createTasks = ()=> {
             </div>
         `);
       });
-    
+      add.innerHTML = "Add";
       resetForm();
       
 }
@@ -91,7 +93,7 @@ let editTask = (e) => {
     textInput.value = selectedTask.children[0].innerHTML;
     dateInput.value = selectedTask.children[1].innerHTML;
     textarea.value = selectedTask.children[2].innerHTML;
-  
+    add.innerHTML = "Edit";
     deleteTask(e);
   
 }
