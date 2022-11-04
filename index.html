@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="shortcut icon" href="to-do-list.png" type="image/x-icon">
+    <title>TODO App</title>
+</head>
+<body>
+    <div class="app">
+        <h4>TODO App</h4>
+
+        <div onclick="showModal()" id="addNew">
+          <span>Add New Task</span>
+          <i class="fas fa-plus"></i>
+        </div>
+
+        <div class="tasks">
+            <h5>Tasks</h5>
+            <div id="task"></div>
+        </div>
+    </div>
+    <form id="form" class="modal-fade">
+        <div id="modal" class="modal-content">
+            <div class="modal-header">
+                <h5>Add New Task</h5>
+                <span onclick="closeForm()" class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Task Title</p>
+                <input type="text" class="form-control" name="" id="textInput" />
+                <div id="msg"></div>
+                <br />
+                <p>Due Date</p>
+                <input type="date" class="form-control" name="" id="dateInput" />
+                <br />
+                <p>Description</p>
+                <textarea name="" class="form-control" id="textarea" cols="30"rows="5"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeForm()">
+                  Close
+                </button>
+                <button type="submit" id="add" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
