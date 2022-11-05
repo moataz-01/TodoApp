@@ -195,3 +195,9 @@ body {
     margin: 0 5px;
     font-size: 17px;
   }
+
+@media screen and (max-width:530px) {
+    .modal-fade .modal-content {
+        width: 300px;
+    }
+}
